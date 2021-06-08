@@ -6,8 +6,8 @@ library(numDeriv)
 library(stringr)
 library(numDeriv)
 # run first 3 section data 43-45 session
-X<-readRDS("Xs13.rds")  
-Y<-readRDS("Cs13.rds")
+X<-readRDS("Covariate_variable.rds")  
+Y<-readRDS("Phrase_Counts.rds")
 Ytemp=Y[,c(1,3,4,10)]# Only use 4 bigrams:  ``american people'', ``member congress'',  ``men women'' and ``year ago''
 bigramName=str_replace_all(colnames(Ytemp), fixed(" "), "")
 Mu <- rowSums(Ytemp) # compute m_t
